@@ -1,0 +1,147 @@
+body {
+    padding: 0px;
+    margin:0px;
+    background-image: linear-gradient(to right,rgb(129, 129, 230),purple);
+    box-sizing: 0.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border: 20px solid rgb(10, 0, 0);
+}
+.font {
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+    color: rgb(246, 244, 249);
+    font-weight:bolder;
+}
+.task-container {
+    width:500px;
+    height: 500px;
+    background-color: rgb(0, 3, 5);
+    border-radius: 50px;
+    overflow: overlay;
+}
+.task-container::-webkit-scrollbar-track {
+    background-color: rgb(0, 6, 12);
+    border-radius: 20px;
+}
+.taskt-container::-webkit-scrollbar {
+    width:0;
+}
+.task-container:hover::-webkit-scrollbar {
+    width:7px;
+}
+.task-container::-webkit-scrollbar-thumb {
+    background:rgb(129, 129, 230);
+}
+.inputField {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.button {
+    width: 95px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid rgb(243, 240, 240); 
+    transition-duration: 0.4s;
+    background-color:rgb(129, 129, 230);
+
+}
+.button:hover {
+    background-color:rgb(7, 7, 93);
+    color: aliceblue;
+}
+#taskInput{
+    background-color: purple;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid rgb(247, 244, 244);
+}
+ul li:hover {
+    background:rgb(7, 7, 93);
+    color: black;
+}
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding:12px 8px 12px 50px;
+    user-select: none;
+    cursor:pointer;
+    position:relative;
+    color: aliceblue;
+}
+ul li::before {
+    content:"";
+    position:absolute;
+    height: 28px;
+    width:28px;
+    border-radius: 50%;
+    background-image: url(./Images/unchecked.png); 
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left:8px;
+}
+ul li.checked {
+    color: rgb(101, 76, 101);
+    text-decoration:line-through;
+}
+ul li.checked::before {
+    background-image: url(./Images/checked.png);
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: rgb(129, 129, 230);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background: rgb(161, 12, 159);
+}
+.filter-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.buttonAll {
+    width: 95px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid rgb(244, 239, 239); 
+    background-color: rgb(201, 90, 201);
+    transition-duration: 0.4s;
+}
+.buttonAll:hover {
+    background-color: rgb(25, 25, 145);
+}
+.buttonActive {
+    width: 95px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid rgb(250, 245, 245); 
+    background-color: rgb(201, 90, 201);
+    transition-duration: 0.4s;
+}
+.buttonActive:hover {
+    background-color: yellow;
+}
+.buttonCompleted {
+    width: 95px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid rgb(247, 244, 244); 
+    background-color: rgb(201, 90, 201);
+    transition-duration: 0.4s;
+}
+.buttonCompleted:hover {
+    background-color: green;
+}
