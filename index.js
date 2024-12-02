@@ -52,14 +52,10 @@ function showAll() {
 function showActive() {
 
     showTask()
-    var complete = document.getElementsByTagName("li")
-    var completeLength = complete.length - 1
-    for (i = 0; i <= completeLength; i++) {
-        if (complete[i].classList.contains("checked")) {
-            console.log(complete[i].innerHTML)
-            let a = complete[i]
-            a.remove()
-        }
+    const checked = document.getElementsByClassName("checked")
+    var i = 0;
+    while(checked.length > 0) {
+      checked[i].remove()
     }
 }
 
@@ -75,14 +71,14 @@ function showActive() {
 function showComplete() {
 
     showTask()
-    var complete = document.getElementsByTagName("li")
-    var completeLength = complete.length - 1
-    for (i = 0; i <= completeLength; i++) {
-        if (!complete[i].classList.contains("checked")) {
-            //console.log(complete[i].innerHTML)
-            let a = complete[i]
-            a.remove()
-        }
+    const all = document.getElementsByTagName("li")
+    i = 0
+    while(all.length > 0) {
+      if(all[i].classList.contains("checked")){
+        i++
+      } else {
+        all[i].remove()
+      }
     }
 }
 
